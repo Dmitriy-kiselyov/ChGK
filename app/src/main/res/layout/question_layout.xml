@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/question_fragment_parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/answer_buttons"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding_margin"
+            android:paddingRight="@dimen/padding_margin">
+
+            <TextView
+                android:id="@+id/question_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/question_title_margin"
+                android:layout_marginBottom="@dimen/question_title_margin"
+                android:text="Вопрос # 242"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/question_title"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/question_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/question_group_interval"
+                android:text="@string/question_example"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/question_text_size"/>
+
+
+            <GridLayout
+                android:id="@+id/timer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/question_group_interval">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="@dimen/padding_margin"
+                    android:layout_row="0"
+                    android:text="Таймер:"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/question_sub_title_size"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/timer_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_column="0"
+                    android:layout_row="1"
+                    android:text="@string/start"
+                    android:textSize="@dimen/question_button_text_size"/>
+
+                <Chronometer
+                    android:id="@+id/timer_chronometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="center"
+                    android:layout_row="0"
+                    android:layout_rowSpan="2"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/question_timer_text_size"/>
+
+            </GridLayout>
+
+            <Button
+                android:id="@+id/show_answer_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginBottom="@dimen/question_title_margin"
+                android:text="Показать ответ"
+                android:textSize="@dimen/question_button_text_size"/>
+
+            <LinearLayout
+                android:id="@+id/answer_block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/question_title_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="@dimen/padding_margin"
+                    android:text="Ответ:"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/question_sub_title_size"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/question_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Partitura."
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/question_text_size"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/comment_block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/question_title_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="@dimen/padding_margin"
+                    android:text="Комментарий:"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/question_sub_title_size"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/question_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Partitura."
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/question_text_size"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/answer_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/padding_margin_sub"
+        android:layout_marginLeft="@dimen/padding_margin"
+        android:layout_marginRight="@dimen/padding_margin"
+        android:layout_marginTop="@dimen/padding_margin_sub">
+
+        <Button
+            android:id="@+id/correct_button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginRight="@dimen/padding_margin"
+            android:layout_weight="50"
+            android:textSize="@dimen/question_button_text_size"
+            android:text="@string/correct"/>
+
+        <Button
+            android:id="@+id/wrong_button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="50"
+            android:textSize="@dimen/question_button_text_size"
+            android:text="@string/wrong"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

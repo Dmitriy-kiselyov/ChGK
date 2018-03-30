@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Что? Где? Когда?</string>
+    <string name="question_example">По-латыни \"созданное\" - creatura, \"раскрашенное\" - politura, \"нарисованное\" -\r\npintura. Переведите на латынь словосочетание \"разделенное на части\".</string>
+
+    <string name="start">Старт</string>
+    <string name="pause">Пауза</string>
+
+    <string name="correct">Верно</string>
+    <string name="wrong">Неверно</string>
+
+    <string name="clear">Сброс</string>
+    <string name="show_statistics">Показать статистику</string>
+
+    <string name="statistics_format" formatted="false">Угадано %d из %d (%.2f%%)</string>
+</resources>
