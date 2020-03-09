@@ -1,27 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical"
-              android:padding="@dimen/padding_margin">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding_margin"
+    >
 
-    <TextView
-        android:id="@+id/question_list_item_text1"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:text="Первая сотня вопросов"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/list_main_text_size"/>
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
 
-    <TextView
-        android:id="@+id/question_list_item_text2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:text="100 вопросов"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="@dimen/list_sub_text_size"/>
+        <TextView
+            android:id="@+id/question_list_item_text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Первая сотня"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/list_main_text_size"
+            />
+
+        <TextView
+            android:id="@+id/question_list_item_text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="100 вопросов"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="@dimen/list_sub_text_size"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/padding_margin_sub"
+        android:layout_weight="1"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_right_arrow"
+        />
 
 </LinearLayout>
