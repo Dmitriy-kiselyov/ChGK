@@ -1,19 +1,17 @@
 package ru.pussy_penetrator.chgk;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
 import ru.pussy_penetrator.chgk.model.QuestionDatabase;
 import ru.pussy_penetrator.chgk.model.QuestionDatabaseLab;
 
-/**
- * Created by Sex_predator on 19.10.2016.
- */
-public class StatisticsDialog extends android.support.v4.app.DialogFragment {
+public class StatisticsDialog extends DialogFragment {
 
     private static final String INDEX_ARG = "group_index";
 
@@ -46,10 +44,10 @@ public class StatisticsDialog extends android.support.v4.app.DialogFragment {
         getDialog().setTitle("Статистика");
         View view = inflater.inflate(R.layout.statistics, container, false);
 
-        mGroupNameTextView = (TextView) view.findViewById(R.id.statistics_group_name);
-        mGroupTextView = (TextView) view.findViewById(R.id.statistics_group);
-        mCommonTextView = (TextView) view.findViewById(R.id.statistics_common);
-        mSessionTextView = (TextView) view.findViewById(R.id.statistics_current);
+        mGroupNameTextView = view.findViewById(R.id.statistics_group_name);
+        mGroupTextView = view.findViewById(R.id.statistics_group);
+        mCommonTextView = view.findViewById(R.id.statistics_common);
+        mSessionTextView = view.findViewById(R.id.statistics_current);
 
         QuestionDatabase database = QuestionDatabaseLab.get(getActivity());
         mGroupNameTextView.setText(database.getName(mGroupIndex) + ":");

@@ -3,22 +3,19 @@ package ru.pussy_penetrator.chgk;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 import ru.pussy_penetrator.chgk.model.QuestionDatabase;
 import ru.pussy_penetrator.chgk.model.QuestionDatabaseLab;
 
-/**
- * Created by Sex_predator on 16.10.2016.
- */
 public class QuestionPagerActivity extends AppCompatActivity {
 
     private static final String SELECTED_QUESTION_GROUD_ARG = "selected_group";

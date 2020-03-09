@@ -3,8 +3,6 @@ package ru.pussy_penetrator.chgk;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +11,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import ru.pussy_penetrator.chgk.lib.MultiLang;
 import ru.pussy_penetrator.chgk.model.QuestionDatabase;
 import ru.pussy_penetrator.chgk.model.QuestionDatabaseLab;

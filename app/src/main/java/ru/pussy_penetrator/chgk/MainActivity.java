@@ -1,10 +1,7 @@
 package ru.pussy_penetrator.chgk;
 
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 
-/**
- * Created by Sex_predator on 15.10.2016.
- */
 public class MainActivity extends SingleFragmentActivity {
 
     @Override

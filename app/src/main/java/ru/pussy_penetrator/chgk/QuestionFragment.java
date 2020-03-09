@@ -3,8 +3,6 @@ package ru.pussy_penetrator.chgk;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -18,11 +16,10 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import ru.pussy_penetrator.chgk.model.Question;
 
-/**
- * Created by Sex_predator on 16.10.2016.
- */
 public class QuestionFragment extends Fragment {
 
     private static final String QUESTION_ARG                = "question";
